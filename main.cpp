@@ -40,10 +40,6 @@ int main()
 
 	ifstream fin;
 	ofstream fout;
-	/*
-	fin.open("Miss_Muffet.txt");
-	fout.open("Encoded_Rhyme.txt");
-	*/
 
 	
 	std::ostringstream code;
@@ -72,15 +68,10 @@ int main()
 			}
 		}
 	}
+	fin.close();
+	fout.close();
 
 	//huff_tree.print_code(code); //prints assigned codes for each element in huff tree
-
-	std::string result = code.str();
-	std::cout << result;
-
-	result = huff_tree.decode("010");
-
-	std::cout << result;
 
 	return 0;
 }
